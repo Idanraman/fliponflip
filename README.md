@@ -15,5 +15,5 @@ The indicators design was made to be as similar as possible to the israeli T-6 T
 
 You can either:
 1. clone the repo and deploy localy for your own use
-2. use it via the link - https://idanraman.github.io/fim/example.html
+2. use it via the link - https://idanraman.github.io/fim/example.html (assuming I didn't delete it)
 
