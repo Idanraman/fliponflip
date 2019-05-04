@@ -1,0 +1,247 @@
+<!-- 
+
+jQuery Flight Indicators plugin
+By Sébastien Matton (seb_matton@hotmail.com)
+Published under GPLv3 License.
+
+https://github.com/sebmatton/jQuery-Flight-Indicators
+ 
+ -->
+<html lang="en" dir="ltr">
+<head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <!-- Syntax coloration -->
+    <link rel="stylesheet" type="text/css" href="_examples_data/prism/prism.css" />
+    <!-- This page style -->
+    <link rel="stylesheet" type="text/css" href="_examples_data/style.css" />
+    <!-- Flight Indicators library styles -->
+    <link rel="stylesheet" type="text/css" href="css/flightindicators.css" />
+    <title>FlipOnFlip</title>
+
+    <style type="text/css">
+        
+
+#clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #0275d8;
+    display: inline-block;
+}
+
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #025aa5;
+    display: inline-block;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    </br>
+    <div class="row">
+        <div class="col-md-12 text-center"> 
+            <div id="clockdiv">
+              <div id="timer">
+                <span class="seconds" id='timerin'>00</span>
+                <div class="smalltext">זמן</div>
+              </div>
+            </div>
+        </div>
+    </div>
+</br>
+    <div class="row">
+
+    <div class="col-md-12 text-center"> 
+
+<form class="form-inline">
+  <div class="form-group mx-sm-3 mb-2">
+    <input type="number" class="form-control" id="smin" placeholder="מהירות מינימלית">
+  </div>
+    <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" class="sr-only">מהירות מקסימלית</label>
+    <input type="number" class="form-control" id="smax" placeholder="מהירות מקסימלית">
+  </div>
+    <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" class="sr-only">גובה מינימלי</label>
+    <input type="number" class="form-control" id="hmin" placeholder="גובה מינימלי">
+  </div>
+    <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" class="sr-only">גובה מקסימלי</label>
+    <input type="number" class="form-control" id="hmax" placeholder="גובה מקסימלי">
+  </div>
+  <button type="button" class="btn btn-primary mb-2" onclick="myFunction()">נתונים חדשים</button>
+</form>
+    </div>
+    </div>
+    </br>
+    <div class="examples">
+        <div>
+            <span id="airspeed"></span>
+            <!--
+            <span id="attitude"></span>-->
+            <span id="altimeter"></span>            
+        </div>
+    </div>
+
+    </br>
+    <div class="row">
+        <div class="col-md-3 text-center"> 
+            <button type="button" class="btn btn-primary" >תלול מדי</button>
+        </div>
+        <div class="col-md-3 text-center"> 
+            <button type="button" class="btn btn-primary" >שטוח מדי</button>
+        </div>
+        <div class="col-md-3 text-center"> 
+            <button type="button" class="btn btn-primary" >עודף פוטנציאל</button>
+        </div>
+        <div class="col-md-3 text-center"> 
+            <button type="button" class="btn btn-primary" ">חוסר פוטנציאל</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  return {
+    'total': t,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id) {
+  var endtime = new Date(Date.parse(new Date()) + 5 * 1000);
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  async function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+      document.getElementById("timer").style.background = "#d9534f";
+      document.getElementById("timerin").style.background = "#c9302c";
+      await sleep(100);
+      swal({
+      title: "קצב קצב קצב...",
+      text: "לא הספקת להגיב בזמן. עוד נסיון?",
+      icon: "warning",
+      button: "תודה לאל שזה לא מאפק",
+    }).then((value) => {
+        var live = 0;
+    });
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+</script>
+
+<!-- Syntax color -->
+<script src="_examples_data/prism/prism.js"></script>
+
+<!-- Importing jQuery library -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<!-- Importing the FlightIndicators library -->
+<script src="js/jquery.flightindicators.js"></script>
+
+
+
+<script type="text/javascript">
+
+<!-- Let start our scripts -->
+var gauge_size = 350
+// First static example
+var first_attitude = $.flightIndicator('#first_attitude', 'attitude', {size:350, roll:8, pitch:3, showBox : true});
+// Dynamic examples
+var attitude = $.flightIndicator('#attitude', 'attitude', {roll:10, pitch:90, size:gauge_size, showBox : true});
+var heading = $.flightIndicator('#heading', 'heading', {heading:150, showBox:true});
+var variometer = $.flightIndicator('#variometer', 'variometer', {vario:-5, showBox:true});
+var airspeed = $.flightIndicator('#airspeed', 'airspeed', {showBox: false, size:gauge_size});
+var altimeter = $.flightIndicator('#altimeter', 'altimeter',{ size:gauge_size});
+var turn_coordinator = $.flightIndicator('#turn_coordinator', 'turn_coordinator', {turn:0});
+
+// Update at 20Hz
+var increment = 0;
+function myFunction() {
+
+      document.getElementById("timer").style.background = "#0275d8";
+      document.getElementById("timerin").style.background = "#025aa5";
+
+    swal({
+      title: "בוא נתחיל",
+      text: "אתה נמצא בהפוך על הפוך ומקריא נתונים בתא, צריך לקבל החלטה מה המצב שלך. שים לב שיש לך 5 שניות",
+      icon: "success",
+      button: "אני לוקח אני טס",
+    }).then((value) => {
+        var live = 1;
+        initializeClock('clockdiv');
+
+        var hmin = document.getElementById("hmin").value;
+        var smin = document.getElementById("smin").value;
+        var hmax = document.getElementById("hmax").value;
+        var smax = document.getElementById("smax").value;
+        var h = +hmin + Math.random()*(+hmax - +hmin)
+        var s = +smin + Math.random()*(+smax - +smin)
+        altimeter.setAltitude(h);
+        airspeed.setAirSpeed(s);
+        });
+}
+
+setInterval(function() {
+    // Airspeed update
+    //airspeed.setAirSpeed(80+80*Math.sin(increment/10));
+
+    // Attitude update
+    //attitude.setRoll(30*Math.sin(increment/10));
+    //attitude.setPitch(50*Math.sin(increment/20));
+
+    // Altimeter update
+    //altimeter.setAltitude(10*increment);
+    //altimeter.setPressure(1000+3*Math.sin(increment/50));
+    increment++;
+    
+    // TC update - note that the TC appears opposite the angle of the attitude indicator, as it mirrors the actual wing up/down position
+    turn_coordinator.setTurn((30*Math.sin(increment/10))*-1);
+
+    // Heading update
+    heading.setHeading(increment);
+    
+    // Vario update
+    variometer.setVario(2*Math.sin(increment/10));
+}, 50);
+</script>
+</body>
+</html>

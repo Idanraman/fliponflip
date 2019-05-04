@@ -1,0 +1,59 @@
+<svg width="400.667" height="400.666" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <circle id="svg_1" r="161" cy="200" cx="200.333" fill="#232323"/>
+  <line id="svg_5" y2="102.968" x2="281.752" y1="85.02" x1="296.814" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_6" y2="124.953" x2="330.321" y1="136.667" x1="310.03" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_7" y2="178.006" x2="325.076" y1="173.938" x1="348.149" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_8" y2="221.997" x2="325.076" y1="226.065" x1="348.149" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_9" y2="263.336" x2="310.03" y1="275.05" x1="330.32" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_10" y2="297.035" x2="281.752" y1="314.982" x1="296.812" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_11" y2="319.031" x2="243.655" y1="341.046" x1="251.667" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_12" y2="326.67" x2="200.332" y1="350.098" x1="200.331" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_13" y2="319.03" x2="157.008" y1="341.045" x1="148.995" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_14" y2="297.034" x2="118.911" y1="314.98" x1="103.85" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_15" y2="263.334" x2="90.633" y1="275.047" x1="70.343" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_16" y2="221.995" x2="75.588" y1="226.063" x1="52.515" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_17" y2="178.004" x2="75.588" y1="173.934" x1="52.516" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_18" y2="136.666" x2="90.635" y1="124.949" x1="70.346" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_19" y2="102.967" x2="118.912" y1="85.018" x1="103.854" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_20" y2="113.797" x2="303.075" y1="103.523" x1="315.313" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_21" y2="80.973" x2="243.655" y1="58.956" x1="251.669" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_22" y2="83.855" x2="267.395" y1="70.017" x1="275.381" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_23" y2="73.334" x2="200.333" y1="49.904" x1="200.333" stroke-miterlimit="10" stroke-width="4" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_24" y2="67.923" x2="223.626" y1="52.188" x1="226.398" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_25" y2="61.619" x2="212.444" y1="50.478" x1="213.417" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_26" y2="65.824" x2="236.289" y1="55.021" x1="239.182" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_27" y2="74.105" x2="259.042" y1="63.969" x1="263.767" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_28" y2="86.212" x2="280.01" y1="77.05" x1="286.424" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_29" y2="154.136" x2="326.362" y1="148.667" x1="341.376" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_30" y2="200.006" x2="334.448" y1="200.002" x1="350.427" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_31" y2="245.876" x2="326.358" y1="251.337" x1="341.375" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_32" y2="286.213" x2="303.067" y1="296.48" x1="315.312" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_33" y2="316.15" x2="267.385" y1="329.987" x1="275.38" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_34" y2="332.079" x2="223.615" y1="347.816" x1="226.396" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_35" y2="332.077" x2="177.038" y1="347.816" x1="174.268" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_36" y2="316.145" x2="133.27" y1="329.988" x1="125.284" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_37" y2="286.203" x2="97.59" y1="296.481" x1="85.351" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_38" y2="245.864" x2="74.303" y1="251.337" x1="59.287" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_39" y2="199.994" x2="66.217" y1="200" x1="50.235" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_40" y2="154.125" x2="74.307" y1="148.664" x1="59.287" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <line id="svg_41" y2="113.788" x2="97.598" y1="103.52" x1="85.351" stroke-miterlimit="10" stroke-width="2" stroke="#FFFFFF" fill="none"/>
+  <text style="cursor: move;" id="svg_42" font-size="20" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,257.6592,123.6489) ">50</text>
+  <text x="-3.96039" y="0" id="svg_43" font-size="20" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,292.1592,187.1489) ">100</text>
+  <text x="0.990098" y="-4.950488" id="svg_44" font-size="20" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,267.3848,263.3359) ">150</text>
+  <text x="-5.940585" y="1.980195" id="svg_45" font-size="20" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,225.0059,302.1489) ">200</text>
+  <text x="-4.950488" y="1.485147" id="svg_46" font-size="20" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,153.0015,302.1489) ">250</text>
+  <text style="cursor: move;" id="svg_47" font-size="20" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,107.1592,256.6489) ">300</text>
+  <text style="cursor: move;" x="-3.465342" y="3.96039" id="svg_48" font-size="20" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,91.4746,184.6489) ">350</text>
+  <text style="cursor: move;" id="svg_49" font-size="20" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,125.2837,123.6489) ">400</text>
+  <text id="svg_50" font-size="14" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,175.3799,242.1895) ">KNOTS</text>
+  <text id="svg_51" font-size="14" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,161.3086,165.1895) ">AIR SPEED</text>
+  <text id="svg_52" font-size="20" font-family="sans-serif" stroke-miterlimit="10" stroke-width="0.5" stroke="#FFFFFF" fill="#FFFFFF" transform="matrix(1,0,0,1,194.6592,99.6489) ">0</text>
+ </g>
+</svg>
